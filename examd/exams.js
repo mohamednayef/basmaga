@@ -44,7 +44,6 @@ let num20=document.getElementById('num20');
 
 
 
-
 num1.onclick=function(){
     q1.style.display='flex';
     q2.style.display='none';
@@ -485,3 +484,99 @@ num20.onclick=function(){
     q19.style.display='none';
     q20.style.display='flex';
 }
+
+
+
+
+//   const prevButton = document.getElementById('pre');
+//   const nextButton = document.getElementById('next');
+//   const contentContainer = document.querySelector('.quistions');
+//   const pages = contentContainer.querySelectorAll('.qu'); // Get all pages
+
+//   let currentPage = 1; // Start on the first page (index 0)
+
+//   // Function to show the specified page
+//   function showPage(pageNumber) {
+//     currentPage = pageNumber;
+
+//     pages.forEach((page, index) => {
+//       page.style.display = index === currentPage ? 'block' : 'none';
+//     });
+
+//     // Disable buttons if necessary (at the beginning or end of content)
+//     prevButton.disabled = currentPage === 0;
+//     nextButton.disabled = currentPage === pages.length - 1;
+//   }
+
+//   // Event listeners for button clicks
+//   prevButton.addEventListener('click', () => {
+//     if (currentPage > 0) {
+//       showPage(currentPage - 1);
+//     }
+//   });
+
+//   nextButton.addEventListener('click', () => {
+//     if (currentPage < pages.length - 1) {
+//       showPage(currentPage + 1);
+//     }
+//   });
+
+//   // Show the initial page (optional, can be removed if you prefer starting hidden)
+//   showPage(currentPage);
+
+
+
+let graphics_2021_button = document.querySelectorAll('.num');
+let graphics_2021_question = document.querySelectorAll('.qu');
+let graphics_2021_next = document.getElementById('graphics_2021_next');
+let graphics_2021_previous = document.getElementById('graphics_2021_previous');
+
+// ******************************************
+function isHidden(element) {
+    if (element) {
+        var displayStyle = window.getComputedStyle(element).getPropertyValue('display');
+        return displayStyle === 'none';
+    }
+    return false; // Return false if the element doesn't exist
+}
+
+
+function next(button, elements) {
+    button.onclick = function() {
+        for (var i = 0; i < elements.length - 1; i++) {
+            if (!isHidden(elements[i])) {
+                elements[i].style.display = 'none';
+                elements[i + 1].style.display = 'block';
+                
+                break; // Exit loop after the first visible element is found and handled
+            }
+        }
+    }
+}
+
+next(graphics_2021_next, graphics_2021_question);
+
+function previous(button, elements) {
+    button.onclick = function() {
+        for (var i = 1; i <= elements.length - 1; i++) {
+            if (!isHidden(elements[i])) {
+                elements[i].style.display = 'none';
+                elements[i - 1].style.display = 'block';
+                break; // Exit loop after the first visible element is found and handled
+            }
+        }
+    }
+}
+
+previous(graphics_2021_previous, graphics_2021_question);
+// ******************************************
+
+function show1(button, question) {
+    button.onclick = function() {
+        for(var i=0; i<6; i++) {
+            graphics_2021_question[i].style.display = 'none';
+        }
+        question.style.display = 'block';
+    }
+}
+
