@@ -34,7 +34,7 @@ nav h1{
     height: 715px;
     border: 2px solid  rgba(3, 5, 46, 0.722);
     border-radius: 5px;
-    background-image: linear-gradient(rgba(7, 70, 107, 0.414),rgba(7, 70, 107, 0.414)),url(p1.jpg) ;
+    background-image: linear-gradient(rgba(7, 70, 107, 0.414),rgba(7, 70, 107, 0.414)),url(../img/p1.jpg) ;
     background-position: center;
     background-size: contain;
     padding-top: 40px;
@@ -43,7 +43,7 @@ nav h1{
     margin: auto;
     box-shadow: 5px 5px 20px black;
     color: rgba(255, 255, 255, 0.792);
-    display:none ;
+    /* display:none ; */
 }
 .web_info p{
 font-size: 18x;
