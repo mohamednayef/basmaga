@@ -59,7 +59,8 @@ let web_2021_previous = document.getElementById('web_2021_previous');
 let web_2021_send = document.getElementById('web_2021_send'); 
 
 web_2021_buttons.style.display = 'none';
-web_2021_previous_next_send.style.display = 'none';
+console.log(web_2021_previous_next_send);
+// web_2021_previous_next_send.style.display = 'none';
 for(let i=0; i<web_2021_question.length; i++) {
   web_2021_question[i].style.display = 'none';
 }
@@ -70,7 +71,7 @@ web_2021_begin.onclick = function() {
   web_2021_begin.style.display = 'none';
 
   web_2021_buttons.style.display = 'block';
-web_2021_previous_next_send.style.display = 'block';
+// web_2021_previous_next_send.style.display = 'block';
 web_2021_question[0].style.display = 'block';
 }
 
