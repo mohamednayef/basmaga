@@ -183,7 +183,9 @@ font-size: 18px;
     width: 250px;
     padding-top: 500px;
     padding-left: 10px;
-    
+    position: absolute;
+    z-index: 1;
+    left: 120px;
 }
 .but button{
     background-color:#24313da6 ;
